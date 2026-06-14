@@ -18,7 +18,8 @@ body{font-family:'Inter',sans-serif;color:var(--charcoal);background:var(--white
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 60px;display:flex;align-items:center;justify-content:space-between;background:var(--cream);transition:all .3s}
 nav.scrolled{background:rgba(240,238,230,.97);box-shadow:0 2px 20px rgba(0,0,0,.06)}
-.nav-logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--charcoal);letter-spacing:1px;text-decoration:none}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:700;color:var(--charcoal);letter-spacing:2.5px;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+.logo-mark{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--green);color:var(--gold);border-radius:9px;font-size:1.25rem;letter-spacing:0;box-shadow:0 3px 10px rgba(26,86,50,.25)}
 .nav-links{display:flex;gap:32px;align-items:center}
 .nav-links a{text-decoration:none;color:var(--charcoal);font-size:.88rem;font-weight:500;letter-spacing:.3px;transition:color .3s}
 .nav-links a:hover{color:var(--green)}
@@ -61,7 +62,8 @@ section{padding:100px 60px}
 .service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--green);transform:scaleX(0);transition:transform .4s;transform-origin:left}
 .service-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.06);border-color:rgba(0,0,0,.04)}
 .service-card:hover::before{transform:scaleX(1)}
-.service-icon{width:52px;height:52px;background:var(--green);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:1.4rem;color:var(--white)}
+.service-icon{width:52px;height:52px;background:var(--green);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--white)}
+.service-icon svg{width:26px;height:26px}
 .service-name{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:600;color:var(--charcoal);margin-bottom:10px}
 .service-desc{font-size:.88rem;color:var(--gray);line-height:1.65}
 
@@ -69,7 +71,8 @@ section{padding:100px 60px}
 .why-us{background:var(--cream)}
 .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px;max-width:1100px}
 .why-item{padding:16px}
-.why-icon{font-size:2.2rem;margin-bottom:14px}
+.why-icon{width:44px;height:44px;margin-bottom:16px;color:var(--green)}
+.why-icon svg{width:38px;height:38px}
 .why-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;margin-bottom:8px;color:var(--charcoal)}
 .why-desc{font-size:.86rem;color:var(--gray);line-height:1.65}
 
@@ -95,7 +98,8 @@ section{padding:100px 60px}
 /* FOOTER */
 footer{background:var(--charcoal);color:rgba(255,255,255,.7);padding:60px}
 .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
-.footer-brand{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--white);margin-bottom:14px}
+.footer-brand{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--white);margin-bottom:14px;letter-spacing:2px;display:inline-flex;align-items:center;gap:9px}
+.footer-mark{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;background:var(--green);color:var(--gold);border-radius:8px;font-size:1.1rem;letter-spacing:0}
 .footer-tagline{font-size:.85rem;line-height:1.6;margin-bottom:18px}
 .footer-social{display:flex;gap:10px}
 .footer-social a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:var(--white);text-decoration:none;font-size:.8rem;transition:all .3s}
@@ -104,6 +108,46 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.7);padding:60px}
 .footer-col a{display:block;color:rgba(255,255,255,.55);text-decoration:none;font-size:.85rem;margin-bottom:9px;transition:color .2s}
 .footer-col a:hover{color:var(--gold)}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;flex-wrap:wrap;gap:10px}
+
+
+/* DESTINATIONS */
+.destinations{background:var(--white)}
+.dest-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;max-width:1200px;margin:0 auto}
+.dest-card{position:relative;height:170px;border-radius:14px;overflow:hidden;cursor:pointer;display:flex;align-items:flex-end;padding:20px;transition:all .4s;box-shadow:0 4px 16px rgba(0,0,0,.05)}
+.dest-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.12)}
+.dest-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(15,58,31,.15) 0%,rgba(15,58,31,.55) 100%);z-index:1;transition:all .4s}
+.dest-card:hover .dest-overlay{background:linear-gradient(160deg,rgba(15,58,31,.3) 0%,rgba(15,58,31,.7) 100%)}
+.dest-name{position:relative;z-index:2;color:var(--white);font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:600;text-shadow:0 2px 8px rgba(0,0,0,.3)}
+.dc1{background:linear-gradient(135deg,#2A7A4A,#1A5632)}
+.dc2{background:linear-gradient(135deg,#3d8b5f,#1f6b3d)}
+.dc3{background:linear-gradient(135deg,#1A5632,#0F3A1F)}
+.dc4{background:linear-gradient(135deg,#2d6b8a,#1a4a63)}
+.dc5{background:linear-gradient(135deg,#c8a951,#a08434)}
+.dc6{background:linear-gradient(135deg,#4a7a5f,#2a5638)}
+.dc7{background:linear-gradient(135deg,#3a8db5,#1a5d83)}
+.dc8{background:linear-gradient(135deg,#5a8a6f,#3a6a4f)}
+.dc9{background:linear-gradient(135deg,#7a6a4a,#5a4a2f)}
+.dc10{background:linear-gradient(135deg,#b58a4a,#8a6534)}
+.dc11{background:linear-gradient(135deg,#d4a951,#b08434)}
+.dc12{background:linear-gradient(135deg,#2A7A4A,#0F3A1F)}
+
+
+/* REVIEWS */
+.reviews{background:var(--cream);padding:100px 60px}
+.review-rating{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:18px}
+.stars{display:flex;gap:3px}
+.stars svg{width:22px;height:22px;color:var(--gold)}
+.rating-text{font-size:.9rem;color:var(--gray);font-weight:500}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:24px;max-width:1150px;margin:0 auto}
+.review-card{background:var(--white);border-radius:16px;padding:32px 28px;box-shadow:0 4px 20px rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.03);transition:all .3s}
+.review-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.08)}
+.review-stars{display:flex;gap:3px;margin-bottom:18px}
+.review-stars svg{width:18px;height:18px;color:var(--gold)}
+.review-text{font-size:.92rem;color:var(--charcoal);line-height:1.7;margin-bottom:22px}
+.review-author{display:flex;align-items:center;gap:12px}
+.review-avatar{width:46px;height:46px;border-radius:50%;background:var(--green);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600}
+.review-name{font-weight:600;font-size:.95rem;color:var(--charcoal)}
+.review-loc{font-size:.8rem;color:var(--gray);margin-top:2px}
 
 @media(max-width:768px){
 nav{padding:14px 20px}
@@ -114,6 +158,10 @@ nav{padding:14px 20px}
 section{padding:60px 24px}
 .section-title{font-size:2rem}
 .trust-bar{padding:28px 24px;gap:28px}
+.reviews{padding:60px 24px}
+.dest-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+.dest-card{height:130px}
+.dest-name{font-size:1.05rem}
 .footer-top{grid-template-columns:1fr}
 .footer-bottom{flex-direction:column;text-align:center}
 }
@@ -122,9 +170,10 @@ section{padding:60px 24px}
 <body>
 
 <nav id="navbar">
-<a href="#" class="nav-logo">FRED ADVISORY</a>
+<a href="#" class="nav-logo"><span class="logo-mark">F</span>FRED ADVISORY</a>
 <div class="nav-links">
 <a href="#services">Services</a>
+<a href="#destinations">Destinations</a>
 <a href="#why">Why Us</a>
 <a href="#process">Process</a>
 <a href="#contact">Contact</a>
@@ -158,12 +207,12 @@ Get Free Consultation
 <h2 class="section-title">Visa Solutions Tailored to You</h2>
 <p class="section-sub">From tourist trips to business ventures, we handle every visa category with expertise and care.</p>
 <div class="services-grid">
-<div class="service-card"><div class="service-icon">&#127758;</div><div class="service-name">Schengen Visit Visa</div><div class="service-desc">Travel across 27 European countries with a single visa. We handle documentation, itinerary planning, and embassy appointment booking.</div></div>
-<div class="service-card"><div class="service-icon">&#127468;&#127463;</div><div class="service-name">UK Standard Visitor Visa</div><div class="service-desc">Visit the United Kingdom for tourism, business meetings, or family visits. Complete guidance from application to approval.</div></div>
-<div class="service-card"><div class="service-icon">&#127482;&#127480;</div><div class="service-name">USA B1/B2 Visitor Visa</div><div class="service-desc">Expert preparation for US visa interviews, DS-160 filing, and documentation to maximize your approval chances.</div></div>
-<div class="service-card"><div class="service-icon">&#9992;&#65039;</div><div class="service-name">Tourist / Visit Visa</div><div class="service-desc">Planning a holiday? We assist with tourist visa applications worldwide &#8212; from document preparation to submission.</div></div>
-<div class="service-card"><div class="service-icon">&#128188;</div><div class="service-name">Business Visit Visa</div><div class="service-desc">Attending conferences, meetings, or exploring partnerships abroad? Get your business visa processed smoothly and on time.</div></div>
-<div class="service-card"><div class="service-icon">&#128203;</div><div class="service-name">Document Preparation</div><div class="service-desc">Cover letters, financial documents, travel insurance, hotel bookings, and flight itineraries &#8212; all handled professionally.</div></div>
+<div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div class="service-name">Schengen Visit Visa</div><div class="service-desc">Travel across 27 European countries with a single visa. We handle documentation, itinerary planning, and embassy appointment booking.</div></div>
+<div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><line x1="9" y1="9" x2="9" y2="9.01"/><line x1="9" y1="12" x2="9" y2="12.01"/><line x1="9" y1="15" x2="9" y2="15.01"/></svg></div><div class="service-name">UK Standard Visitor Visa</div><div class="service-desc">Visit the United Kingdom for tourism, business meetings, or family visits. Complete guidance from application to approval.</div></div>
+<div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="service-name">USA B1/B2 Visitor Visa</div><div class="service-desc">Expert preparation for US visa interviews, DS-160 filing, and documentation to maximize your approval chances.</div></div>
+<div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></div><div class="service-name">Tourist / Visit Visa</div><div class="service-desc">Planning a holiday? We assist with tourist visa applications worldwide &#8212; from document preparation to submission.</div></div>
+<div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><div class="service-name">Business Visit Visa</div><div class="service-desc">Attending conferences, meetings, or exploring partnerships abroad? Get your business visa processed smoothly and on time.</div></div>
+<div class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div><div class="service-name">Document Preparation</div><div class="service-desc">Cover letters, financial documents, travel insurance, hotel bookings, and flight itineraries &#8212; all handled professionally.</div></div>
 </div>
 </section>
 
@@ -172,10 +221,32 @@ Get Free Consultation
 <h2 class="section-title">The FRED ADVISORY Difference</h2>
 <p class="section-sub">We don&#8217;t just process visas &#8212; we build confidence in every application.</p>
 <div class="why-grid">
-<div class="why-item"><div class="why-icon">&#127919;</div><div class="why-title">Personalized Strategy</div><div class="why-desc">Every applicant&#8217;s profile is unique. We craft a tailored approach that aligns with embassy expectations for your specific case.</div></div>
-<div class="why-item"><div class="why-icon">&#9889;</div><div class="why-title">Fast Processing</div><div class="why-desc">Urgent travel plans? We expedite your application with priority handling and same-day document preparation when needed.</div></div>
-<div class="why-item"><div class="why-icon">&#128737;&#65039;</div><div class="why-title">Transparent Pricing</div><div class="why-desc">No hidden fees, no surprises. You know exactly what you&#8217;re paying for before we begin &#8212; clear and honest from day one.</div></div>
-<div class="why-item"><div class="why-icon">&#129309;</div><div class="why-title">End-to-End Support</div><div class="why-desc">From the first consultation to the visa stamp in your passport, we&#8217;re with you at every stage of the journey.</div></div>
+<div class="why-item"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><div class="why-title">Personalized Strategy</div><div class="why-desc">Every applicant&#8217;s profile is unique. We craft a tailored approach that aligns with embassy expectations for your specific case.</div></div>
+<div class="why-item"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="why-title">Fast Processing</div><div class="why-desc">Urgent travel plans? We expedite your application with priority handling and same-day document preparation when needed.</div></div>
+<div class="why-item"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><div class="why-title">Transparent Pricing</div><div class="why-desc">No hidden fees, no surprises. You know exactly what you&#8217;re paying for before we begin &#8212; clear and honest from day one.</div></div>
+<div class="why-item"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="why-title">End-to-End Support</div><div class="why-desc">From the first consultation to the visa stamp in your passport, we&#8217;re with you at every stage of the journey.</div></div>
+</div>
+</section>
+
+<section class="destinations" id="destinations">
+<div style="text-align:center;max-width:640px;margin:0 auto 56px">
+<div class="section-eyebrow">Where We Take You</div>
+<h2 class="section-title">Discover Extraordinary Destinations</h2>
+<p class="section-sub" style="margin:0 auto">We secure visas for the world&#8217;s most sought-after destinations across Europe, the UK, and the United States.</p>
+</div>
+<div class="dest-grid">
+<div class="dest-card dc1"><div class="dest-overlay"></div><div class="dest-name">France</div></div>
+<div class="dest-card dc2"><div class="dest-overlay"></div><div class="dest-name">Italy</div></div>
+<div class="dest-card dc3"><div class="dest-overlay"></div><div class="dest-name">United Kingdom</div></div>
+<div class="dest-card dc4"><div class="dest-overlay"></div><div class="dest-name">United States</div></div>
+<div class="dest-card dc5"><div class="dest-overlay"></div><div class="dest-name">Spain</div></div>
+<div class="dest-card dc6"><div class="dest-overlay"></div><div class="dest-name">Germany</div></div>
+<div class="dest-card dc7"><div class="dest-overlay"></div><div class="dest-name">Greece</div></div>
+<div class="dest-card dc8"><div class="dest-overlay"></div><div class="dest-name">Switzerland</div></div>
+<div class="dest-card dc9"><div class="dest-overlay"></div><div class="dest-name">Austria</div></div>
+<div class="dest-card dc10"><div class="dest-overlay"></div><div class="dest-name">Portugal</div></div>
+<div class="dest-card dc11"><div class="dest-overlay"></div><div class="dest-name">Netherlands</div></div>
+<div class="dest-card dc12"><div class="dest-overlay"></div><div class="dest-name">Belgium</div></div>
 </div>
 </section>
 
@@ -191,6 +262,40 @@ Get Free Consultation
 </div>
 </section>
 
+<section class="reviews">
+<div style="text-align:center;max-width:640px;margin:0 auto 56px">
+<div class="section-eyebrow">Client Experiences</div>
+<h2 class="section-title">What Our Clients Say</h2>
+<div class="review-rating">
+<div class="stars">
+<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+</div>
+<span class="rating-text">Rated 5.0 by our clients</span>
+</div>
+</div>
+<div class="reviews-grid">
+<div class="review-card">
+<div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+<p class="review-text">FRED ADVISORY made my Schengen visa process completely stress-free. They guided me through every document and my visa was approved without any issues. Highly professional team!</p>
+<div class="review-author"><div class="review-avatar">A</div><div><div class="review-name">Ahmed Khan</div><div class="review-loc">Schengen Visa &#8226; Lahore</div></div></div>
+</div>
+<div class="review-card">
+<div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+<p class="review-text">I applied for my UK visitor visa through them and the experience was excellent. Their attention to detail and clear communication gave me confidence throughout. Strongly recommended.</p>
+<div class="review-author"><div class="review-avatar">S</div><div><div class="review-name">Sara Malik</div><div class="review-loc">UK Visitor Visa &#8226; Karachi</div></div></div>
+</div>
+<div class="review-card">
+<div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+<p class="review-text">Professional, responsive, and genuinely helpful. They prepared all my documents for the USA B1/B2 visa and walked me through the interview prep. Couldn&#8217;t have asked for better support.</p>
+<div class="review-author"><div class="review-avatar">H</div><div><div class="review-name">Hassan Raza</div><div class="review-loc">USA B1/B2 Visa &#8226; Islamabad</div></div></div>
+</div>
+</div>
+</section>
+
 <section class="cta-section" id="contact">
 <h2 class="section-title">Ready to Start Your Journey?</h2>
 <p>Get a free consultation today. Our visa experts are just a message away &#8212; available on WhatsApp for instant support.</p>
@@ -203,7 +308,7 @@ Chat on WhatsApp
 <footer>
 <div class="footer-top">
 <div>
-<div class="footer-brand">FRED ADVISORY</div>
+<div class="footer-brand"><span class="footer-mark">F</span>FRED ADVISORY</div>
 <div class="footer-tagline">Your trusted partner for global visa solutions. Making international travel accessible, one visa at a time.</div>
 <div class="footer-social">
 <a href="https://www.facebook.com/profile.php?id=61590621513255" target="_blank">f</a>
@@ -217,7 +322,7 @@ Chat on WhatsApp
 </div>
 <div class="footer-bottom">
 <span>&#169; 2024 FRED ADVISORY. All rights reserved.</span>
-<span>Empowering journeys worldwide &#127758;</span>
+<span>Empowering journeys worldwide</span>
 </div>
 </footer>
 
